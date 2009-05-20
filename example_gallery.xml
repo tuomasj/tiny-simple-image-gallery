@@ -1,8 +1,8 @@
 <gallery>
     <config>
         <root></root>
-        <images>images/</images>
-        <thumbnails>images/</thumbnails>
+        <images>example_images/</images>
+        <thumbnails>example_images/</thumbnails>
     </config>
     <images>
         <image>
