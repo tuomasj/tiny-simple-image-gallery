@@ -1,0 +1,44 @@
+TINY SIMPLE IMAGE GALLERY
+=========================
+
+- Does not need PHP or MySQL or any other functionality from webserver
+- Supports thumbnails
+- Configurable image & thumbnail directories
+- Configurable thumbnail sizes
+
+
+LICENSE
+=======
+
+Feel free to use this in any way you want.
+
+
+INSTALL
+=======
+
+Easiest way is to download all the files from repository and hack away :)
+
+but if you want just the gallery, not the example stuff, here is how you do it:
+
+1) Download "tiny-simple-image-gallery.js"
+2) Create your HTML file (copy&paste essantial parts from example.html)
+3) Create your own XML image gallery document (again... check the example_gallery.xml)
+4) Remember to set config values from XML document to suit your own needs (directories)
+5) Copy your images
+6) Voila! It should work! :)
+
+
+TIPS & TRICKS
+=============
+
+    If you are not sure, if your XML document is ok, open it with Firefox.
+    If there is a problem, Firefox will give you good pointers about the problems in document.
+
+    If you want to test this before installing it into webserver, this gallery will work offline without any webservers, 
+    just download the files and double-click "example.html".
+
+
+DEVELOPER
+=========
+
+Tuomas Jomppanen (www.jomppanen.com)
