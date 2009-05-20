@@ -1,11 +1,19 @@
+/*
+ * Tiny Simple Image Gallery
+ * by Tuomas Jomppanen (www.jomppanen.com)
+ *
+ * You can freely use this on your own projects, the
+ */
 var THUMBNAIL_WIDTH = 128
 var THUMBNAIL_HEIGHT = 128
 
-    var root_dir = ""
-    var thumbnail_dir = ""
-    var images_dir = ""
+var root_dir = ""
+var thumbnail_dir = ""
+var images_dir = ""
+
 function build_gallery(xml_file, thumbnail_id, image_id, caption_id, tn_width, tn_height)
 {
+    /* override thumbnail dimensions */
     if(!tn_width)
         tn_width = THUMBNAIL_WIDTH;
     if(!tn_height)
@@ -52,30 +60,36 @@ function build_gallery(xml_file, thumbnail_id, image_id, caption_id, tn_width, t
                     node.appendChild(link)
                     gallery.append(node)
                     $(link).click( function() {
-                        console.log($(this))
-                        show_image(image_id, $(this).attr('href'), $(this).attr('title'))
+                        show_image(image_id, caption_id, $(this).attr('href'), $(this).attr('title'))
                         return false;
                     });
                 });
 
+                // show first image
+                $(xml).find('image:first').each( function() {
+                    node = $(this)
+                    filename = node.find('filename').text()
+                    caption = node.find('description').text()
+                    show_image(image_id, caption_id, filename, caption) 
+                });
             },
             error: function(xml, text, error) {
-                $(document).html('error during XML parsing')
+                    $(document).html('error during XML parsing')
+                }
             }
-            }
-   )
+   );
 }
 
-function show_image(image_id, img, alt)
+function show_image(image_id, caption_id, img, alt)
 {
-    console.log(img)
     node = $('#'+image_id)
     node.empty()
+    caption = $('#'+caption_id)
+    caption.empty()
     image = document.createElement('img')
     $(image).attr('src', root_dir + images_dir + img)
     desc = document.createElement('p')
     desc.appendChild( document.createTextNode(alt) )
     node.append(image)
-    node.append(desc)
-    
+    caption.append(desc)
 }
