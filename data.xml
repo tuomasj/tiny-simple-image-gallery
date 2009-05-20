@@ -1,0 +1,22 @@
+<gallery>
+    <config>
+        <root></root>
+        <images>images/</images>
+        <thumbnails>images/</thumbnails>
+    </config>
+    <images>
+        <image>
+            <filename>image_1.png</filename>
+            <description>first image of the gallery with thumbnail</description>
+            <thumbnail>thumb_image_1.png</thumbnail>
+        </image>
+        <image>
+            <filename>image_2.png</filename>
+            <description>this is the second image, with no thumbnail</description>
+        </image>
+        <image>
+            <filename>image_3.png</filename>
+            <description>third image</description>
+        </image>
+    </images>
+</gallery>
