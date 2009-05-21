@@ -5,6 +5,7 @@ TINY SIMPLE IMAGE GALLERY
 - Supports thumbnails
 - Configurable image & thumbnail directories
 - Configurable thumbnail sizes
+- Images are defined in XML document
 
 
 LICENSE
